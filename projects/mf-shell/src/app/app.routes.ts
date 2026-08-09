@@ -1,9 +1,13 @@
 import { Routes } from '@angular/router';
+import { loadRemoteModule } from '@angular-architects/native-federation';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'room',
     loadComponent: () =>
-      import('mfRoom/Component').then((m) => m.App),
+      loadRemoteModule({
+        remoteName: 'mfRoom',
+        exposedModule: './ComponentRoom',
+      }).then((m) => m.App),
   },
 ];

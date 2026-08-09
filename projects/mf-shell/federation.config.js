@@ -4,8 +4,7 @@ module.exports = withNativeFederation({
   shared: {
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
   },
-  
-  remotes:{
+  remotes: {
     mfRoom: 'http://localhost:4201/remoteEntry.json',
   },
   name: 'mf-shell',
