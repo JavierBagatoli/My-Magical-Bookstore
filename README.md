@@ -36,7 +36,7 @@ This part of the application is intentionally separated from the main bookstore 
 │                  ┌──────────────┐           │
 │                  │  User Room   │           │
 │                  │              │           │
-│                  │ 📚 📖 📕 📗 │           │
+│                  │ 📚 📖 📕 📗│           │
 │                  │              │           │
 │                  └──────────────┘           │
 │                                             │
