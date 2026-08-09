@@ -1,59 +1,159 @@
-# DemoMicrofront
+# 📚 My Magical Bookstore
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+**My Magical Bookstore** is a book management and discovery application inspired by platforms such as Goodreads, with a magical twist.
 
-## Development server
+The project is being developed with **Angular and Micro Frontends**, separating the main bookstore experience from a specialized interactive room where users can display the books they have read.
 
-To start a local development server, run:
+> 🚧 **Status: In development**
 
-```bash
-ng serve
+## ✨ Features
+
+The application is planned to include:
+
+* 🔐 **User authentication**
+* 📚 **Book search**
+* ⭐ **Book ratings**
+* 📖 **Personal reading history**
+* 🏠 **Personalized book room**
+* 👤 **User-specific content**
+* 🧩 **Micro Frontend architecture**
+* 🎮 An interactive room where users can visually display the books they have read
+
+### 🏠 Personalized Book Room
+
+One of the main features of the application is a dedicated **Micro Frontend** for each user's room.
+
+The room represents a visual space where users can display the books they have read. Users will have the option to decide whether their room should be publicly visible.
+
+This part of the application is intentionally separated from the main bookstore because it is planned to contain significantly more interactive and graphical functionality than the rest of the application.
+
+```text
+┌─────────────────────────────────────────────┐
+│              My Magical Bookstore           │
+│                                             │
+│  Search books • Ratings • Library • Login   │
+│                                             │
+│                  ┌──────────────┐           │
+│                  │  User Room   │           │
+│                  │              │           │
+│                  │ 📚 📖 📕 📗 │           │
+│                  │              │           │
+│                  └──────────────┘           │
+│                                             │
+└─────────────────────────────────────────────┘
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🧩 Architecture
 
-## Code scaffolding
+The application uses a **Micro Frontend architecture**.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The main application acts as the **Shell**, while the interactive room is implemented as an independent Micro Frontend.
 
-```bash
-ng generate component component-name
+```text
+My Magical Bookstore
+│
+├── mf-shell
+│   ├── Authentication
+│   ├── Book search
+│   ├── Book ratings
+│   ├── User library
+│   └── Application navigation
+│
+└── mf-room
+    └── User's personalized reading room
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The Micro Frontend architecture allows the room to evolve independently from the main application while keeping the main bookstore focused on its core functionality.
 
-```bash
-ng generate --help
+## 🛠️ Technologies
+
+### Frontend
+
+* **Angular**
+* **TypeScript**
+* **PrimeNG** — UI components
+* **PrimeFlex** — layout and utility classes
+* **NgRx / Redux** — application state management
+* **RxJS** — reactive programming
+* **Angular Signals** — local reactive state
+* **Native Federation** — Micro Frontend architecture
+
+### Planned Backend
+
+The backend is planned to use:
+
+* **Node.js**
+* **Firebase**
+
+Firebase is planned to handle authentication and/or application data depending on the final architecture.
+
+## 📦 Project Structure
+
+The project is organized around the Micro Frontend architecture:
+
+```text
+My-Magical-Bookstore/
+│
+├── projects/
+│   │
+│   ├── mf-shell/
+│   │   └── Main bookstore application
+│   │
+│   └── mf-room/
+│       └── Personalized user room
+│
+├── package.json
+├── angular.json
+└── README.md
 ```
 
-## Building
+## 🚧 Development Status
 
-To build the project run:
+The project is currently under active development.
 
-```bash
-ng build
-```
+### Implemented
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+* [x] Angular project setup
+* [x] Micro Frontend architecture
+* [x] Shell application
+* [x] Room Micro Frontend
+* [x] Remote loading between Shell and Room
 
-## Running unit tests
+### Planned
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+* [ ] User authentication
+* [ ] Book search
+* [ ] Book ratings
+* [ ] Reading history
+* [ ] User profiles
+* [ ] Public/private room configuration
+* [ ] Persistent user data
+* [ ] Node.js backend
+* [ ] Firebase integration
+* [ ] Interactive book room
+* [ ] 3D/interactive room experience
 
-```bash
-ng test
-```
+## 🎯 Project Goals
 
-## Running end-to-end tests
+The goal of **My Magical Bookstore** is not only to create a book management application, but also to explore modern frontend architecture and build a more immersive way of interacting with a personal reading history.
 
-For end-to-end (e2e) testing, run:
+The project is also intended as a practical exploration of:
 
-```bash
-ng e2e
-```
+* Modern Angular development
+* Micro Frontends
+* State management
+* Component-based UI architecture
+* Reactive programming
+* Frontend/backend integration
+* Interactive web experiences
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🔗 Repository
 
-## Additional Resources
+**GitHub:**
+https://github.com/JavierBagatoli/My-Magical-Bookstore
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 📄 License
+
+This project is currently under development. License information will be added in a future release.
