@@ -2,13 +2,18 @@ const { withNativeFederation, shareAll } = require('@angular-architects/native-f
 
 module.exports = withNativeFederation({
   shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+  ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto',  }),
   },
   remotes: {
     mfRoom: 'http://localhost:4201/remoteEntry.json',
   },
   name: 'mf-shell',
   skip: [
+    'primeng',
+    'primeicons',
+    'primeflex',
+    '@primeuix/themes',
+
     'rxjs/ajax',
     'rxjs/fetch',
     'rxjs/testing',

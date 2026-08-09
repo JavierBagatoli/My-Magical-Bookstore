@@ -1,0 +1,25 @@
+@let book = data;
+
+<section class="h-20rem justify-content-center p-2 bg-primary">
+    @if(book.id === "aa3"){
+
+    }@else {
+        <p-skeleton
+            width="10rem"
+            height="10rem"
+            borderRadius="16px"
+        />
+    }
+
+    <h3>{{book.title }}</h3>
+    <h5>{{book.subtitle}}</h5>
+
+    @for (index of [1,2,3,4, 5]; track index){
+        @if(book.rating >= index){
+            <i class="pi pi-star-fill" style="font-size: 2rem"></i>
+        }@else {
+            <i class="pi pi-star" style="font-size: 2rem"></i>
+        }
+    }
+
+</section>

@@ -12,6 +12,10 @@ module.exports = withNativeFederation({
   },
 
   skip: [
+    'primeng',
+    'primeicons',
+    'primeflex',
+
     'rxjs/ajax',
     'rxjs/fetch',
     'rxjs/testing',
